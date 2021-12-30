@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><title>Dump all</title>
+<batch_id>BU_ZvQVpKb5PGqfJZCUTXWjoA</batch_id>
+<owner_page_id>X1HaSBKPPyGIJ3GSMH7R3A</owner_page_id>
+<note _T="NN"></note>
+<start_ts _T="DH">2021-08-04T12:24:09.803642+02:00</start_ts>
+<end_ts _T="DH">2021-08-04T12:24:10.411365+02:00</end_ts>
+<time_delta>0:00:00</time_delta>
+<result url="http://127.0.0.1:8082/_storage/site/maintenance/backups/unlocode.zip">Dump complete</result></GenRoBag>
