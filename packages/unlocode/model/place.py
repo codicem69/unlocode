@@ -9,3 +9,4 @@ class Table(object):
         tbl.column('placecode',size='3',name_long='!![en]place code')
         tbl.column('descrizione',name_long='!![en]description')
         tbl.formulaColumn('unlocode', "$nazione_code || $placecode", name_long= 'unlocode')
+        tbl.formulaColumn('citta_nazione',"$descrizione || ' - ' || @nazione_code.nome")
