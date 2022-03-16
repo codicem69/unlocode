@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <GenRoBag>
-	<db implementation="postgres" host="localhost" user="postgres" password="xxxxx" port="5432"/>
+
     <db dbname="unlocode"/>
 
 	<packages>
@@ -8,7 +8,7 @@
 		<gnrcore_adm pkgcode="gnrcore:adm"/>
 		<unlocode/>
 	</packages>
-
+	<menu package="*"/>
 	<authentication pkg="gnrcore:sys">
 		<py_auth defaultTags="user" pkg="adm" method="authenticate"/>
 	</authentication>

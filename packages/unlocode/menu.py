@@ -1,7 +1,7 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+# encoding: utf-8
+class Menu(object):
+    def config(self,root,**kwargs):
+        unlocode = root.branch(u"unlocode", tags="")
+        unlocode.thpage(u"Località", table="unlocode.place", tags="")
+        unlocode.thpage(u"Nazione", table="unlocode.nazione", tags="")
 
-def config(root,application=None):
-    unlocode = root.branch('unlocode')
-    unlocode.thpage('Località',table='unlocode.place')
-    unlocode.thpage('Nazione',table='unlocode.nazione')
