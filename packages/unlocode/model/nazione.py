@@ -7,4 +7,5 @@ class Table(object):
         self.sysFields(tbl,id=False)
         tbl.column('code',size='2',name_long='!![en]code',name_short='!![en]code')
         tbl.column('nome',name_long='!![en]name',name_short='!![en]name')
+        tbl.column('ue', dtype='B', name_short='!![en]UE')
         tbl.formulaColumn('codename',"$code || ' - ' || $nome")

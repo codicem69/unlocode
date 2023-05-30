@@ -10,6 +10,7 @@ class View(BaseComponent):
         r = struct.view().rows()
         r.fieldcell('code', width='7em')
         r.fieldcell('nome', width='20em')
+        r.fieldcell('ue')
 
     def th_order(self):
         return 'code'
@@ -26,6 +27,7 @@ class Form(BaseComponent):
         fb = pane.formbuilder(cols=2, border_spacing='4px')
         fb.field('code',validate_notnull=True)
         fb.field('nome', width='40em',validate_notnull=True )
+        fb.field('ue' )
 
 
     def th_options(self):
