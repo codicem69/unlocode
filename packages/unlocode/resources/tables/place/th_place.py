@@ -9,7 +9,8 @@ class View(BaseComponent):
     def th_struct(self,struct):
         r = struct.view().rows()
         unlocode = r.columnset('colset_unlocode', name='Unlocode', color='white',background='blue')
-        unlocode.fieldcell('nazione_code', width='7em')
+        unlocode.fieldcell('@nazione_code.ue')
+        unlocode.fieldcell('nazione_code', width='10em')
         unlocode.fieldcell('placecode', width='7em')
         unlocode.fieldcell('unlocode')
         place = r.columnset('colset_place', name='Località', color='white',background='grey')
@@ -51,7 +52,9 @@ class View(BaseComponent):
         
     def th_sections_nazioni(self):
         return [dict(code='tutti',caption='Tutti'),
-            dict(code='italia',caption='Italia', condition='$nazione_code = :code',condition_code='IT')]
+            dict(code='italia',caption='Italia', condition='$nazione_code = :code',condition_code='IT'),
+            dict(code='ue',caption='UE', condition='@nazione_code.ue = :code',condition_code=True),
+            dict(code='extraue',caption='ExtraUE', condition='@nazione_code.ue is not true')]
             #dict(code='senza_acquisti',caption='Senza Acquisti',condition='$n_fatture=0')]
 
     def th_top_toolbarsuperiore(self,top):
