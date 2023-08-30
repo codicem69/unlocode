@@ -7,7 +7,7 @@ class Table(object):
         self.sysFields(tbl,id=False)
         tbl.column('code',size='2',name_long='!![en]code',name_short='!![en]code')
         tbl.column('nome',name_long='!![en]name',name_short='!![en]name')
-        tbl.column('ue', dtype='B', name_short='!![en]UE')
+        tbl.column('ue', dtype='B', name_short='!![en]UE',batch_assign=True)
         tbl.formulaColumn('codename',"$code || ' - ' || $nome")
         tbl.pyColumn('ue_san',name_long='!![en]UE Sanimare',dtype='B', static=True)
         #pyColumn ue_san creata per verificare tramite le preferenze del pkg shipsteps se abilitare o no le pratiche sanimare
