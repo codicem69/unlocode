@@ -15,6 +15,9 @@ class Table(object):
         #nella th_arrival di shipsteps ho inserito nei widget sanimare della task list la variabile hidden che verifica il valore ue_san
         #in caso di valore true nasconde il widget
         
+        #pycolumn riscritta sul model arrival per considerare anche le passeggere ONG al fine di abilitare NSIS anche quando vengono dalla comunità europea
+        #la pratica di arrivo risulta come move_type Passengers/ONG
+        
     def pyColumn_ue_san(self, record, field):
         pref=self.db.application.getPreference('ue',pkg='shipsteps')
         code=record['code']
